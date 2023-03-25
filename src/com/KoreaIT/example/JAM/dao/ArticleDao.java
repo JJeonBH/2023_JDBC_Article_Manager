@@ -25,6 +25,7 @@ public class ArticleDao {
 		sql.append(", memberId = ?", loginedMemberId);
 		sql.append(", title = ?", title);
 		sql.append(", `body` = ?", body);
+		sql.append(", vCnt = ?", 0);
 		
 		return DBUtil.insert(conn, sql);
 	}
